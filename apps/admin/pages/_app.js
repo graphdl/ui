@@ -1,9 +1,8 @@
-import Script from 'next/script'
+import 'ui/styles.css'
 
 export default function App({ Component, pageProps }) {
   return (
     <>
-      <Script src="https://cdn.tailwindcss.com?plugins=forms" />
       <Component {...pageProps} />
     </>
   )

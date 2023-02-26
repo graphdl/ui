@@ -5,6 +5,7 @@
   "types": "./index.tsx",
   "license": "MIT",
   "scripts": {
+    "build": "tailwindcss build -o styles.css",
     "lint": "eslint \"**/*.ts*\""
   },
   "devDependencies": {

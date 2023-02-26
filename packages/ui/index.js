@@ -1,3 +1,3 @@
 import * as React from 'react'
-export * from './Admin'
+export * from './layouts/Admin'
 export * from './Button'

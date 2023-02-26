@@ -13,14 +13,15 @@ import {
 } from '@heroicons/react/24/outline'
 import { MagnifyingGlassIcon } from '@heroicons/react/20/solid'
 
-const navigation = [
-  { name: 'Dashboard', href: '#', icon: HomeIcon, current: true },
-  { name: 'Team', href: '#', icon: UsersIcon, current: false },
-  { name: 'Projects', href: '#', icon: FolderIcon, current: false },
-  { name: 'Calendar', href: '#', icon: CalendarIcon, current: false },
-  { name: 'Documents', href: '#', icon: InboxIcon, current: false },
-  { name: 'Reports', href: '#', icon: ChartBarIcon, current: false },
+const navigationDefaults = [
+  { name: 'Dashboard', href: '/', icon: HomeIcon, current: true },
+  { name: 'Team', href: '/Team', icon: UsersIcon, current: false },
+  { name: 'Projects', href: '/Projects', icon: FolderIcon, current: false },
+  { name: 'Calendar', href: '/Calendar', icon: CalendarIcon, current: false },
+  { name: 'Documents', href: '/Documents', icon: InboxIcon, current: false },
+  { name: 'Reports', href: '/Reports', icon: ChartBarIcon, current: false },
 ]
+
 const userNavigation = [
   { name: 'Your Profile', href: '#' },
   { name: 'Settings', href: '#' },
@@ -33,6 +34,8 @@ function classNames(...classes) {
 
 export const Admin = props => {
   const [sidebarOpen, setSidebarOpen] = useState(false)
+
+  const { navigation = navigationDefaults } = props
 
   return (
     <>
