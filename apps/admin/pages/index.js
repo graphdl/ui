@@ -1,10 +1,6 @@
-import { Button } from 'ui'
 import { Admin } from 'ui'
 
-export default function App() {
-  return (
-    <Admin>
+export default Admin
 
-    </Admin>
-  )
-}
+export const getStaticProps = () => ({ props: { view: 'dashboard' } })
+export const config = { runtime: 'experimental-edge' }

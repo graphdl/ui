@@ -1,10 +1,7 @@
-import { Button } from 'ui'
 import { Admin } from 'ui'
 
-export default function App() {
-  return (
-    <Admin>
+export default Admin
 
-    </Admin>
-  )
-}
+export const getStaticProps = ({ params }) => ({ props: { params, view: 'list' } })
+export const getStaticPaths = () => ({ paths: [], fallback: 'blocking' })
+export const config = { runtime: 'experimental-edge' }
