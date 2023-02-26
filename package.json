@@ -10,15 +10,25 @@
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "devDependencies": {
+    "@babel/core": "^7.21.0",
+    "babel-loader": "^8.3.0",
     "eslint-config-custom": "*",
     "prettier": "latest",
     "turbo": "latest"
   },
   "engines": {
     "node": ">=14.0.0"
+  },
+  "prettier":{
+    "singleQuote": true,
+    "trailingComma": "all",
+    "semi": false,
+    "printWidth": 120
   },
   "dependencies": {},
   "packageManager": "yarn@1.22.19"
